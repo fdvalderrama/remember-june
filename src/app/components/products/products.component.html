@@ -1,2 +1,23 @@
 <p>products works!</p>
 <button [routerLink]="['/users']">Users</button>
+<table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Cost</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (product of products(); track $index) {
+          <tr>
+            <td>{{product.Id}}</td>
+            <td>{{product.Name}}</td>
+            <td>{{product.Cost}}</td>
+            <td>{{product.Price}}</td>
+          </tr>
+        }
+    </tbody>
+</table>
+
